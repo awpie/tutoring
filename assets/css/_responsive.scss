@@ -1,0 +1,137 @@
+// Responsive breakpoints
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: var(--breakpoint-sm)) { @content; }
+  }
+  @else if $breakpoint == md {
+    @media (max-width: var(--breakpoint-md)) { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media (max-width: var(--breakpoint-lg)) { @content; }
+  }
+  @else if $breakpoint == xl {
+    @media (max-width: var(--breakpoint-xl)) { @content; }
+  }
+}
+
+// Responsive utilities
+.hide-sm {
+  @include respond-to(sm) {
+    display: none !important;
+  }
+}
+
+.hide-md {
+  @include respond-to(md) {
+    display: none !important;
+  }
+}
+
+.hide-lg {
+  @include respond-to(lg) {
+    display: none !important;
+  }
+}
+
+.hide-xl {
+  @include respond-to(xl) {
+    display: none !important;
+  }
+}
+
+// Responsive typography
+html {
+  font-size: 16px;
+  
+  @include respond-to(lg) {
+    font-size: 15px;
+  }
+  
+  @include respond-to(md) {
+    font-size: 14px;
+  }
+  
+  @include respond-to(sm) {
+    font-size: 13px;
+  }
+}
+
+// Responsive spacing
+.responsive-spacing {
+  padding: var(--spacing-xl);
+  
+  @include respond-to(lg) {
+    padding: var(--spacing-lg);
+  }
+  
+  @include respond-to(md) {
+    padding: var(--spacing-md);
+  }
+  
+  @include respond-to(sm) {
+    padding: var(--spacing-sm);
+  }
+}
+
+// Responsive grid
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--spacing-md);
+  
+  @include respond-to(md) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  @include respond-to(sm) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Responsive container
+.container {
+  @include respond-to(xl) {
+    max-width: 1140px;
+  }
+  
+  @include respond-to(lg) {
+    max-width: 960px;
+  }
+  
+  @include respond-to(md) {
+    max-width: 720px;
+  }
+  
+  @include respond-to(sm) {
+    max-width: 540px;
+  }
+}
+
+// Responsive navigation
+.nav {
+  @include respond-to(md) {
+    &__menu {
+      display: none;
+    }
+    
+    &__mobile-toggle {
+      display: block;
+    }
+  }
+}
+
+// Responsive images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Responsive tables
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  
+  table {
+    min-width: 500px;
+  }
+} 

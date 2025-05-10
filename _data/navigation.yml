@@ -1,9 +1,27 @@
+# Main navigation
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
+  - title: "Home"
+    url: "/"
   - title: "About"
-    url: /about/
+    url: "/about/"
+  - title: "Services"
+    url: "/services/"
+  - title: "Credentials"
+    url: "/credentials/"
+  - title: "Book"
+    url: "/booking/"
+
+# Footer navigation
+footer:
+  - title: "About"
+    url: "/about/"
+  - title: "Services"
+    url: "/services/"
+  - title: "Credentials"
+    url: "/credentials/"
+  - title: "Book"
+    url: "/booking/"
+  - title: "Privacy Policy"
+    url: "/privacy/"
+  - title: "Terms"
+    url: "/terms/"

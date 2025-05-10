@@ -1,0 +1,19 @@
+// Variables
+:root {
+  // Light theme
+  --primary-color: #0071e3;
+  --text-color: #1d1d1f;
+  --background-color: #ffffff;
+  --secondary-background: #f5f5f7;
+  --card-background: #ffffff;
+  --border-color: #d2d2d7;
+  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  --border-radius: 18px;
+  --box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  --box-shadow-hover: 0 8px 32px rgba(0,0,0,0.12);
+  
+  // Animation durations
+  --duration-fast: 0.2s;
+  --duration-normal: 0.3s;
+  --duration-slow: 0.5s;
+} 

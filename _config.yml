@@ -13,20 +13,29 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
+title: 1-on-1 Tutoring
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 twitter_username: username
-github_username: username
+github_username: awpie
 minimal_mistakes_skin: default
 search: true
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+# remote_theme: mmistakes/minimal-mistakes
+
+# Sass/SCSS settings
+sass:
+  sass_dir: assets/css
+  style: compressed
+  load_paths:
+    - _sass
+    - assets/css
+
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
@@ -35,6 +44,7 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
   - _pages
+  - _data
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -58,9 +68,9 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name: "Leonardo Zhang"
+  avatar: "/assets/images/bio-photo.jpg"
+  bio: "Hi! I'm a first-year ECE student at Duke University. I provide SAT, ACT, and AP tutoring services, K-12 tutoring in math, and college application counseling and essay revision."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"

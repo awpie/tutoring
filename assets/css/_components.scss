@@ -1,0 +1,107 @@
+// Card component
+.card {
+  background: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: all var(--duration-normal) var(--transition-timing);
+  overflow: hidden;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  &__header {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  &__body {
+    padding: var(--spacing-lg);
+  }
+  
+  &__footer {
+    padding: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+    background: var(--secondary-background);
+  }
+}
+
+// Button component
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: all var(--duration-normal) var(--transition-timing);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  
+  &--primary {
+    background: var(--primary-color);
+    color: white;
+    
+    &:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+  }
+  
+  &--secondary {
+    background: var(--secondary-background);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    
+    &:hover {
+      background: var(--background-color);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Navigation component
+.nav {
+  &__item {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color);
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-color);
+      transition: width var(--duration-normal) var(--transition-timing);
+    }
+    
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+// Theme toggle component
+.theme-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: var(--z-index-fixed);
+  padding: 1rem;
+  border-radius: 50%;
+  background: var(--card-background);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--transition-timing);
+  
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+  }
+} 

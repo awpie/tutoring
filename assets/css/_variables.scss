@@ -1,0 +1,11 @@
+// Grid
+$grid-columns: 12;
+$grid-gutter-width: 1.5rem;
+
+// Container
+$container-max-widths: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+); 
